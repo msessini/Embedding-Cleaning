@@ -148,7 +148,7 @@ bool MuonDetCleaner<CSCDetId, CSCRecHit2D>::checkTrackVicinity(const GlobalPoint
   double deta = recHit.eta() - track.outerEta();
   double dphi = recHit.phi() - track.outerPhi();
   double dR = TMath::Sqrt(deta*deta + dphi*dphi);
-  if(dR<0.8) return true;
+  if(dR<0.4) return true;
   else return false;
 }
 
@@ -158,7 +158,7 @@ bool MuonDetCleaner<DTLayerId, DTRecHit1DPair>::checkTrackVicinity(const GlobalP
   double deta = recHit.eta() - track.outerEta();
   double dphi = recHit.phi() - track.outerPhi();
   double dR = TMath::Sqrt(deta*deta + dphi*dphi);
-  if(dR<0.8) return true;
+  if(dR<0.4) return true;
   else return false;
 }
 
@@ -168,7 +168,7 @@ bool MuonDetCleaner<RPCDetId, RPCRecHit>::checkTrackVicinity(const GlobalPoint& 
   double deta = recHit.eta() - track.outerEta();
   double dphi = recHit.phi() - track.outerPhi();
   double dR = TMath::Sqrt(deta*deta + dphi*dphi);
-  if(dR<0.8) return true;
+  if(dR<0.4) return true;
   else return false;
 }
 
